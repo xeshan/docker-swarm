@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  web:
+    image: zeshan/cakephpongraph:v1
+    ports:
+      - "8000:80"
+    environment:
+      dbhost: "ec2-13-232-149-1.ap-south-1.compute.amazonaws.com"
+      dbuser: "zeshan"
+      dbpass: ""
+      db: ""
+
+  backend:
+    image: mysql:latest
+    environment:
+      MYSQL_USER: "root"
+      MYSQL_PASSWORD: ""
+      MYSQL_DATABASE: ""
+      
